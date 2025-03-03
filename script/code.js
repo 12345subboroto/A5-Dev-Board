@@ -176,4 +176,8 @@ document.getElementById("colorButton").addEventListener("click", function () {
 document.getElementById('question').addEventListener('click',function(event){
     window.location.href="./question.html"
 })
+// go back page
+function goBack() {
+  window.history.back(); 
+}
 

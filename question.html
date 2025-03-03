@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <P>bangladesh</P>
+<body class="bg-slate-100 m-auto px-10 py-3"  >
+    <section>
+        <div class="navbar bg-base-100 shadow-sm">
+            <div class="flex-1 gap-1">
+                <img class="w-10 h-10" src="./assets/logo.png" alt="" />
+                <p class="text-gray-800 text-4xl font-normal">Dev<span class="text-black font-bold">Board</span></p>
+            </div>
+            <div class="">
+                <button onclick="goBack()" class=" btn btn-active btn-primary ">Back to Desk</button>
+            </div>
+          </div>
+    </section>
+    <section class="py-1 mt-4">
+        <div class="bg-base-100 shadow-sm p-3">
+            <h1 class="text-gray-800 text-2xl font-semibold">Question-1: What are the different ways to select an element in the DOM?</h1>
+            <p class="text-gray-500 text-lg font-medium">There are multiple ways to select an element in the DOM using JavaScript: <br>getElementById() ,getElementsByClassName(),getElementsByTagName(),querySelector()</p> 
+        </div>
+    </section>
+        <section class="py-1">
+            <div class="bg-base-100 shadow-sm p-3">
+                <h1 class="text-gray-800 text-2xl font-semibold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
+                <p class="text-gray-500 text-lg font-medium">Gets or sets the HTML content inside an element, including tags.Gets or sets all text inside an element, including hidden elements, without formatting.</p>
+            </div>
+        </section>
+        <section class="py-1">
+            <div class="bg-base-100 shadow-sm p-3">
+                <h1 class="text-gray-800 text-2xl font-semibold">Question-3: What is event delegation in the DOM?</h1>
+                <p class="text-gray-500 text-lg font-medium">Event delegation is a technique where instead of adding event listeners to multiple child elements, you add a single event listener to their parent. It works by taking advantage of event bubbling.</p>
+            </div>
+        </section>
+        <section class="py-1">
+            <div class="bg-base-100 shadow-sm p-3">
+                <h1 class="text-gray-800 text-2xl font-semibold">Question-4: What is event bubbling in the DOM?</h1>
+                <p class="text-gray-500 text-lg font-medium">Event bubbling is a process where an event starts from the target element and propagates upwards to its parent elements.</p>
+            </div>
+        </section>
+        <section class="py-1">
+            <div class="bg-base-100 shadow-sm p-3">
+                <h1 class="text-gray-800 text-2xl font-semibold">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+                <p class="text-gray-500 text-lg font-medium"> Creating, Adding, and Removing Elements in JavaScript.</p>
+            </div>
+        </section>
+        <script src="./script/code.js"></script>
 </body>
 </html>
