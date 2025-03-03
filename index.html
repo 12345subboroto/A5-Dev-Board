@@ -10,16 +10,15 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-slate-300 max-w-screen-xl m-auto  p-3">
+<body id="bg" class="bg-slate-300  m-auto px-10 py-3">
    <header>
     <nav class="flex justify-between h-20 bg-gray-100 rounded-lg p-5">
         <div>
             <div class="">
                 <div class="flex items-center space-x-2">-
           <img class="w-10 h-10" src="./assets/logo.png" alt="" />
-          <div class="text-4xl font-normal">
-            <span class="text-gray-800">Dev</span>
-            <span class="text-black font-bold">Board</span>
+          <div class="">
+            <p class="text-gray-800 text-4xl font-normal">Dev<span class="text-black font-bold">Board</span></p>
           </div>
         </div>
             </div>
@@ -28,17 +27,18 @@
         <div>
             <div class="flex space-y-4">
                 <!-- First Group -->
-                <div class="flex items-center space-x-4">
-                  <div class="w-10 h-10 flex">
-                    <img src="./assets/checkbox.png" alt="" />
-                    <p class="text-4xl font-semibold text-gray-800">23</p>
+                <div class="flex items-center justify-between space-x-8">
+                  <div class="flex items-center gap-3">
+                    <div>
+                      <img src="./assets/checkbox.png" alt="" />
+                    </div>
+                    <div>
+                      <p id="sum-number" class="text-4xl font-semibold text-gray-800">23</p>
+                    </div>
                   </div>
-                  
-                  <div class="flex items-center space-x-2">
                     <div class="w-10 h-10">
-                        <img src="./assets/theme-btn.png" alt="" />
+                        <img id="colorButton" class="cursor-pointer" src="./assets/theme-btn.png" alt="" />
                       </div>
-                  </div>
                 </div>
                 </div>
               </div>   
@@ -46,36 +46,35 @@
     </nav>
    </header>
    <main>
-  <section class="mt-4 p-2">
+  <section class="mt-4 ">
     <div class="flex flex-row justify-between gap-3">
         <div class="basis-3/4 bg-slate-100 px-2 py-3">
             <div class="flex flex-row gap-3">
                 <div class="basis-1/3">
-                    <div class="flex items-center justify-between bg-slate-100 p-2 rounded shadow">
+                    <div class="flex items-center gap-5 bg-slate-200 p-2 rounded shadow">
                         <!-- Right Group: Ellipse and Checkbox Icon -->
                         <div>
                             <img class="w-8 h-8" src="./assets/checkbox.png" alt="Checkbox Icon" />
-                          </div>
-                        
+                          </div> 
                         <!-- Left Group: Task Assigned & Count -->
                         <div class=" items-center  p-3">
                             <h1 class="text-sm font-medium text-[#00303C]">Task Assigned</h1>
-                            <h1 class="text-3xl text-[#00303C] font-bold ">05</h1>
+                            <h1 id="sub-number" class="text-3xl text-[#00303C] font-bold ">06</h1>
                           </div>             
                       </div>
                       
                 </div>
-                <div class="flex justify-center  basis-2/3 bg-slate-600 rounded-lg gap-2 px-7 py-4">
+                <div id="question" class="bg-indigo-500 cursor-pointer  flex  items-center  basis-2/3  shadow  rounded-lg gap-10 px-7 py-4">
                   <div> 
                      <img class="w-12 h-14"  src="./assets/board.png" alt="">
                     </div>
                     <div>
-                        <p class="text-2xl font-bold text-gray-900">Discover Something New Today!</p>
+                        <p  class="text-2xl font-bold text-gray-900 ">Discover Something<br> New Today!</p>
                       </div>
                       
                 </div>
                 <div class="basis-1/3">
-                    <div class="flex items-center justify-between p-2 bg-slate-100 rounded shadow">
+                    <div class="flex items-center px-5 p-2 bg-slate-200 rounded shadow">
                         <!-- Right Group: Ellipse and Checkbox Icon -->
                         <div>
                             <img class="w-8 h-8" src="./assets/calender.png" alt="Checkbox Icon" />
@@ -85,7 +84,7 @@
                          
                           <div class="items-center  p-3">
                             
-                            <h1 class="text-sm font-medium text-[#00303C] ">Wed , <br><span class="text-2xl text-[#00303C] font-bold ">Jul 28 2025</span> </h1>
+                            <h1 class="text-sm text-[#00303C] font-medium " >Today <br><span id="lastUpdated" class="text-2xl text-[#00303C] font-bold "></span></h1> 
                           </div>             
                       </div>
                 </div>
@@ -97,7 +96,7 @@
                 <div class="p-4 bg-gray-200 shadow rounded-lg space-y-4">
                     
                     <div class="text-lg bg-slate-100 w-28 h-10 font-semibold text-gray-900">
-                      <p class="text-center">ShopEase</p>
+                      <p class="text-center p-1">ShopEase</p>
                     </div>
                  
                     <div class="text-sm text-gray-700">
@@ -119,7 +118,7 @@
                             <h1 class="text-[#00303C] text-xl font-medium">21 March 2025</h1>
                         </div>
                         <div>
-                            <button class="btn btn-primary">Completed</button>
+                            <button id="btn-one" class="btn btn-primary">Completed</button>
                         </div>
 
                        
@@ -127,22 +126,21 @@
                    
                   </div>
                     <!--  -->
-                   <!-- box1 -->
+                   <!-- box2 -->
                 <div class="p-4 bg-gray-200 shadow rounded-lg space-y-4">
                     
                     <div class="text-lg bg-slate-100 w-28 h-10 font-semibold text-gray-900">
-                      <p class="text-center">ShopEase</p>
+                      <p class="text-center p-1">CloudSync</p>
                     </div>
                  
                     <div class="text-sm text-gray-700">
-                      <h1 class="text-2xl font-semibold">Fix Mobile Button Issue</h1>
+                      <h1 class="text-2xl font-semibold">Add Dark Mode</h1>
                     </div>
                    
                     <div class="flex items-start space-x-2">
                       
                       <div class="text-xs bg-slate-100 w-80 h-16 p-2">
-                        <p class=" text-[#000000] font-normal text-sm">Debug using Chrome DevTools, check for </p><span class="inline-block w-40 truncate text-[#000000] font-normal text-sm">overlapping elements, and ensure onClick works properly
-                            and ensure onClick works properly</span> 
+                        <p class=" text-[#000000] font-normal text-sm"> Store the user's preference in  </p><span class="inline-block w-40 truncate text-[#000000] font-normal text-sm">localStorage, fupdate CSS variables dynamically, and apply a smooth transition effect.</span> 
                       </div>
                       
                       
@@ -153,7 +151,7 @@
                             <h1 class="text-[#00303C] text-xl font-medium">21 March 2025</h1>
                         </div>
                         <div>
-                            <button class="btn btn-primary">Completed</button>
+                            <button id="btn-two"  class="btn btn-primary">Completed</button>
                         </div>
 
                        
@@ -161,24 +159,24 @@
                    
                   </div>
                   <!--  -->
-                   <!-- box1 -->
+                   <!-- box3 -->
                 <div class="p-4 bg-gray-200 shadow rounded-lg space-y-4">
                     
                     <div class="text-lg bg-slate-100 w-28 h-10 font-semibold text-gray-900">
-                      <p class="text-center">ShopEase</p>
+                      <p class="text-center p-1">SwiftPay</p>
                     </div>
                  
                     <div class="text-sm text-gray-700">
-                      <h1 class="text-2xl font-semibold">Fix Mobile Button Issue</h1>
+                      <h1 class="text-2xl font-semibold">Optimize  Home page </h1>
                     </div>
                    
                     <div class="flex items-start space-x-2">
                       
                       <div class="text-xs bg-slate-100 w-80 h-16 p-2">
-                        <p class=" text-[#000000] font-normal text-sm">Debug using Chrome DevTools, check for </p><span class="inline-block w-40 truncate text-[#000000] font-normal text-sm">overlapping elements, and ensure onClick works properly
-                            and ensure onClick works properly</span> 
+                        <p class=" text-[#000000] font-normal text-sm">Debug using Chrome DevTools, check </p><span class="inline-block w-40 truncate text-[#000000] font-normal text-sm"> for overlapping elements, and ensure onClick works properly and ensure onClick works properly</span> 
                       </div>
                       
+
                       
                     </div>
                     <div class="flex justify-between gap-2">
@@ -187,7 +185,7 @@
                             <h1 class="text-[#00303C] text-xl font-medium">21 March 2025</h1>
                         </div>
                         <div>
-                            <button class="btn btn-primary">Completed</button>
+                            <button id="btn-three"  class="btn btn-primary">Completed</button>
                         </div>
 
                        
@@ -195,21 +193,21 @@
                    
                   </div>
                   <!--  -->
-                   <!-- box1 -->
+                   <!-- box4 -->
                 <div class="p-4 bg-gray-200 shadow rounded-lg space-y-4">
                     
                     <div class="text-lg bg-slate-100 w-28 h-10 font-semibold text-gray-900">
-                      <p class="text-center">ShopEase</p>
+                      <p class="text-center p-1">Meta</p>
                     </div>
                  
                     <div class="text-sm text-gray-700">
-                      <h1 class="text-2xl font-semibold">Fix Mobile Button Issue</h1>
+                      <h1 class="text-2xl font-semibold">Add new emoji 🤲</h1>
                     </div>
                    
                     <div class="flex items-start space-x-2">
                       
                       <div class="text-xs bg-slate-100 w-80 h-16 p-2">
-                        <p class=" text-[#000000] font-normal text-sm">Debug using Chrome DevTools, check for </p><span class="inline-block w-40 truncate text-[#000000] font-normal text-sm">overlapping elements, and ensure onClick works properly
+                        <p class=" text-[#000000] font-normal text-sm">Debug using Chrome  </p><span class="inline-block w-40 truncate text-[#000000] font-normal text-sm">DevTools, check for overlapping elements, and ensure onClick works properly
                             and ensure onClick works properly</span> 
                       </div>
                       
@@ -217,11 +215,11 @@
                     </div>
                     <div class="flex justify-between gap-2">
                         <div>
-                            <p>Deadline</p>
+                            <p>Google LLC</p>
                             <h1 class="text-[#00303C] text-xl font-medium">21 March 2025</h1>
                         </div>
                         <div>
-                            <button class="btn btn-primary">Completed</button>
+                            <button id="btn-four"  class="btn btn-primary">Completed</button>
                         </div>
 
                        
@@ -229,21 +227,21 @@
                    
                   </div>
                   <!--  -->
-                   <!-- box1 -->
+                   <!-- box5 -->
                 <div class="p-4 bg-gray-200 shadow rounded-lg space-y-4">
                     
                     <div class="text-lg bg-slate-100 w-28 h-10 font-semibold text-gray-900">
-                      <p class="text-center">ShopEase</p>
+                      <p class="text-center p-1">Glassdoar</p>
                     </div>
                  
                     <div class="text-sm text-gray-700">
-                      <h1 class="text-2xl font-semibold">Fix Mobile Button Issue</h1>
+                      <h1 class="text-2xl font-semibold">Integrate OpenAI API </h1>
                     </div>
                    
                     <div class="flex items-start space-x-2">
                       
                       <div class="text-xs bg-slate-100 w-80 h-16 p-2">
-                        <p class=" text-[#000000] font-normal text-sm">Debug using Chrome DevTools, check for </p><span class="inline-block w-40 truncate text-[#000000] font-normal text-sm">overlapping elements, and ensure onClick works properly
+                        <p class=" text-[#000000] font-normal text-sm">Debug using Chrome  </p><span class="inline-block w-40 truncate text-[#000000] font-normal text-sm">DevTools, check for overlapping elements, and ensure onClick works properly
                             and ensure onClick works properly</span> 
                       </div>
                       
@@ -251,11 +249,11 @@
                     </div>
                     <div class="flex justify-between gap-2">
                         <div>
-                            <p>Deadline</p>
+                            <p>Glassdoar</p>
                             <h1 class="text-[#00303C] text-xl font-medium">21 March 2025</h1>
                         </div>
                         <div>
-                            <button class="btn btn-primary">Completed</button>
+                            <button id="btn-five"  class="btn btn-primary">Completed</button>
                         </div>
 
                        
@@ -263,22 +261,22 @@
                    
                   </div>
                   <!--  -->
-                   <!-- box1 -->
+                   <!-- box6 -->
                 <div class="p-4 bg-gray-200 shadow rounded-lg space-y-4">
                     
                     <div class="text-lg bg-slate-100 w-28 h-10 font-semibold text-gray-900">
-                      <p class="text-center">ShopEase</p>
+                      <p class="text-center p-1">ShopEase</p>
                     </div>
                  
                     <div class="text-sm text-gray-700">
-                      <h1 class="text-2xl font-semibold">Fix Mobile Button Issue</h1>
+                      <h1 class="text-2xl font-semibold">Improve Job searching</h1>
                     </div>
                    
                     <div class="flex items-start space-x-2">
                       
                       <div class="text-xs bg-slate-100 w-80 h-16 p-2">
-                        <p class=" text-[#000000] font-normal text-sm">Debug using Chrome DevTools, check for </p><span class="inline-block w-40 truncate text-[#000000] font-normal text-sm">overlapping elements, and ensure onClick works properly
-                            and ensure onClick works properly</span> 
+                        <p class=" text-[#000000] font-normal text-sm">Debug using Chrome </p><span class="inline-block w-40 truncate text-[#000000] font-normal text-sm">overlapping elements, and ensure onClick works properly
+                          DevTools, check for  and ensure onClick works properly</span> 
                       </div>
                       
                       
@@ -289,7 +287,7 @@
                             <h1 class="text-[#00303C] text-xl font-medium">21 March 2025</h1>
                         </div>
                         <div>
-                            <button class="btn btn-primary">Completed</button>
+                            <button id="btn-six" class="btn btn-primary">Completed</button>
                         </div>
 
                        
@@ -300,21 +298,35 @@
 
              </div>
         </div>
-
-
-
-
-        <div class="basis-1/4 bg-slate-100 px-2 py-3 grid justify-center  space-y-2">
-            <div class="flex items-center space-x-2 ">
-                <img class="w-5 h-5" src="./assets/activity.png" alt="" />
-                <div class="text-sm font-medium text-gray-800">Activity Log</div>
-              </div>
-              <button class="btn btn-active btn-secondary">Clear History</button>
+        <div class="basis-1/4 bg-slate-100     ">
+         <div class="grid justify-center">
+          <div>
+            <div class="flex items-center space-x-2 py-4">
+              <img class="w-5 h-5" src="./assets/activity.png" alt="" />
+              <p class="text-lg font-medium text-[#00303C]">Activity Log</p>
+            </div>
+            <button id="clear" class="btn btn-active btn-secondary">Clear History</button>
+          </div>
+         </div>
+         <!-- story -->
+         <!-- one -->
+         <p id="none-one" class="text-[#000000] font-semibold text-lg px-5 mt-5" >You have Completed the task <span id="one"></span><span id="lastUpdatedOne"> </span></p>
+         <!-- two -->
+         <p id="none-two" class="text-[#000000] font-semibold text-lg px-5 mt-5" >You have Completed the task <span id="two"></span><span id="lastUpdatedTwo"> </span></p>
+         <!-- three -->
+         <p id="none-three" class="text-[#000000] font-semibold text-lg px-5 mt-5" >You have Completed the task <span id="three"></span><span id="lastUpdatedThree"> </span></p>
+         <!-- four -->
+         <p id="none-four" class="text-[#000000] font-semibold text-lg px-5 mt-5" >You have Completed the task <span id="four"></span><span id="lastUpdatedFour"> </span></p>
+         <!-- five -->
+         <p id="none-five" class="text-[#000000] font-semibold text-lg px-5 mt-5" >You have Completed the task <span id="five"></span><span id="lastUpdatedFive"> </span></p>
+               <!-- six -->
+         <p id="none-six" class="text-[#000000] font-semibold text-lg px-5 mt-5" >You have Completed the task <span id="six"></span><span id="lastUpdatedSix"> </span></p>
         </div>
         
       </div>
   </section>
 
    </main>
+   <script src="./script/code.js"></script>
 </body>
 </html>
